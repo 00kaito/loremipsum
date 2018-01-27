@@ -1,0 +1,42 @@
+<th:block th:fragment="meta">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="free-educational-responsive-web-template-webEdu">
+<meta name="author" content="webThemez.com">
+<title>Agency</title>
+<link rel="favicon" th:href="@{assets/images/favicon.png}">
+<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+<link rel="stylesheet" th:href="@{assets/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{assets/css/font-awesome.min.css}">
+<link rel="stylesheet" th:href="@{assets/css/bootstrap-theme.css}" media="screen">
+<link rel="stylesheet" th:href="@{assets/css/style.css}">
+<link rel='stylesheet' id='camera-css'  th:href='@{assets/css/camera.css}' type='text/css' media='all'>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<!--[if lt IE 9]>
+<script th:src="@{assets/js/html5shiv.js}"></script>
+<script th:src="@{assets/js/respond.min.js}"></script>
+<![endif]-->
+</th:block>
+
+<th:block th:fragment="navbar">
+<div class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- Button for smallest screens -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav  mainNav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="testimonial.html">Testimonial</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+</th:block>

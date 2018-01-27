@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org/">
+<head>
+    <th:block th:include="fragments/head :: meta"/>
+</head>
+<body>
+<!-- Fixed navbar -->
+<div class="logo">
+    <a href="index.html"><img src="assets/images/Awsome-agency-logo5.png" width="300" align="center"></a>
+</div>
+<th:block th:include="fragments/head :: navbar"/>
+<!-- /.navbar -->
+
+<!-- Header -->
+
+<!-- /Header -->
+<section class="main-contents">
+    <h2 class="text-center sub-texts">Lorem Ipsum text generator.</h2>
+    <div class="container">
+        <div class="item-section col-md-12 col-sm-12 col-xs-12">
+            <!--FORMULARZ LIPSUM-->
+            <form th:object="${form}" method="POST">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <textarea th:text="${lipsum}" class="form-control" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="numberf">Numbers of</label>
+                        <input type="text" th:field="*{number}" id="numberf">
+                    </div>
+                </div>
+
+                <div class="col-sm-8">
+                    <fieldset class="form-group row">
+                        <div class="col-sm-4">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" th:field="*{type}" type="radio" name="optradio" value="paragraph">Paragraph</label>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" th:field="*{type}" type="radio" name="optradio" value="words">Words</label>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" th:field="*{type}" type="radio" name="optradio" value="list">List</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <input type="submit" class="btn btn-primary" value="generate"/>
+                </div>
+            </form>
+        </div>
+        <div class="divider-10"></div>
+        <!--FORMULARZ LIPSUM-->
+        <hr>
+        <div class="item-section col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="item-section col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="item-section col-md-4 col-sm-4 col-xs-12"></div>
+
+    </div>
+</section>
+
+
+<footer>
+    <th:block th:include="fragments/bottom :: footer"/>
+</footer>
+<th:block th:include="fragments/bottom :: scripts"/>
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+</body>
+</html>
