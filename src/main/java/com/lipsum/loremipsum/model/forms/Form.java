@@ -3,7 +3,7 @@ package com.lipsum.loremipsum.model.forms;
 public class Form {
     String text;
     int number;
-    String type;
+    String type = "paragraph";
 
     public String getText() {
         return text;
