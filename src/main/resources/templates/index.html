@@ -29,7 +29,7 @@
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="numberf">Numbers of</label>
-                        <input type="text" th:field="*{number}" id="numberf">
+                        <input type="text" th:field="*{number}" id="numberf" required>
                     </div>
                 </div>
 
@@ -38,21 +38,21 @@
                         <div class="col-sm-4">
                             <div class="form-check">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" th:field="*{type}" type="radio" name="optradio" value="paragraph">Paragraph</label>
+                                    <input class="form-check-input" th:field="*{type}" th:checked="checked" type="radio" value="paragraph">Paragraph</label>
                             </div>
                         </div>
 
                         <div class="col-sm-4">
                             <div class="form-check">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" th:field="*{type}" type="radio" name="optradio" value="words">Words</label>
+                                    <input class="form-check-input" th:field="*{type}" type="radio" value="words">Words</label>
                             </div>
                         </div>
 
                         <div class="col-sm-4">
                             <div class="form-check">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" th:field="*{type}" type="radio" name="optradio" value="list">List</label>
+                                    <input class="form-check-input" th:field="*{type}" type="radio" value="list">List</label>
                             </div>
                         </div>
                     </fieldset>

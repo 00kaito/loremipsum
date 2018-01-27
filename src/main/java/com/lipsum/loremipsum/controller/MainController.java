@@ -24,18 +24,25 @@ public class MainController {
     @PostMapping("/")
     public String homePost(@ModelAttribute("form") Form form, Model model) {
         String type = form.getType();
-        String lipsum="";
-        if (form.getNumber()<1){
+        String lipsum = "";
+        System.out.println(form.getNumber());
+        if (form.getNumber() < 1) {
             model.addAttribute("lipsum", "number field should be more than 0");
             return "index";
         }
 
         switch (type) {
-            case "list" :  lipsum = formService.generateList(form.getNumber());
+            case "list":
+                lipsum = formService.generateList(form.getNumber());
                 break;
-            case "paragraph" :  lipsum = formService.generateParagraphs(form.getNumber());
+            case "paragraph":
+                lipsum = formService.generateParagraphs(form.getNumber());
                 break;
-            case "words" :  lipsum = formService.generateWords(form.getNumber());
+            case "words":
+                lipsum = formService.generateWords(form.getNumber());
+                break;
+            default:
+                lipsum = "choose type to generate";
                 break;
         }
         model.addAttribute("lipsum", lipsum);
