@@ -25,6 +25,10 @@ public class MainController {
     public String homePost(@ModelAttribute("form") Form form, Model model) {
         String type = form.getType();
         String lipsum="";
+        if (form.getNumber()<1){
+            model.addAttribute("lipsum", "number field should be more than 0");
+            return "index";
+        }
 
         switch (type) {
             case "list" :  lipsum = formService.generateList(form.getNumber());
